@@ -1,0 +1,18 @@
+services:
+  svc-demoapi:
+    image: svc-demoapi:latest
+    container_name: svc-demoapi
+    restart: unless-stopped
+    build:
+      context: "."
+      dockerfile: "./build/Dockerfile"
+      args:
+        service_path: "./cmd/demoapi"
+    ports:
+      - 8080:8080
+    networks:
+      - intranet
+
+networks:
+  intranet:
+    driver: bridge
