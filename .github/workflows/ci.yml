@@ -28,7 +28,7 @@ jobs:
 
       - name: build image
         run: |
-          docker build -f ./build/build.Dockerfile --tag ghcr.io/${{ secrets.GHCR_USERNAME }}/demoapi:latest .
+          docker build -f ./build/Dockerfile --tag ghcr.io/${{ secrets.GHCR_USERNAME }}/demoapi:latest .
 
       - name: push image
         run: |
