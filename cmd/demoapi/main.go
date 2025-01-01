@@ -21,7 +21,9 @@ func main() {
 		w.Write([]byte("hello-world"))
 	})
 
-	server := http.Server{} 
+	server := http.Server{
+		Addr: ":8080",
+	}
 	if err := server.ListenAndServe(); err != nil {
 		log.Fatal(err)
 	}
