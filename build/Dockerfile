@@ -9,9 +9,8 @@ RUN go build -o main ./cmd/demoapi/main.go
 FROM alpine:latest
 RUN apk --no-cache add ca-certificates tzdata
 
-WORKDIR /root/
+WORKDIR /app
 
 COPY --from=builder /app/main .
 
 CMD ["./main"]
-
