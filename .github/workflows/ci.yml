@@ -30,4 +30,4 @@ jobs:
 
       - name: push image
         run: |
-          dokcer push ghcr.io/${{ secrets.GHCR_USERNAME }}/demoapi:latest
+          docker push ghcr.io/${{ secrets.GHCR_USERNAME }}/demoapi:latest
