@@ -7,7 +7,7 @@ services:
       context: "."
       dockerfile: "./build/Dockerfile"
       args:
-        service_path: "./cmd/demoapi"
+        service_path: "./cmd/demoapi/main.go"
     ports:
       - 8080:8080
     networks:
