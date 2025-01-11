@@ -33,7 +33,7 @@ jobs:
 
       - name: build image
         run: |
-          docker-compose -f docker-compose.yml build
+          docker-compose -f compose.yml build
           # docker build -f ./build/Dockerfile \
           # --build-arg =value_here
           # --tag ghcr.io/${{ secrets.GHCR_USERNAME }}/demoapi:latest .
